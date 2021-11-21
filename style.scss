@@ -46,12 +46,13 @@ p {
     bottom: 0;
     left: 0;
     right: 0;
+    border-top: 10px solid $b-base;
     background-color: $b-dark;
     color: $c-primary;
     font-weight: $w-light;
     font-size: $s-text/1.5;
     border: 0 2px solid $c-primary;
-    box-shadow: 0 -3px 3px $shadow;
+    box-shadow: 0 -1px 5px $shadow;
 
     @media screen and (min-width: 500px) {
         position: static;
@@ -139,7 +140,7 @@ p {
     .map {
         display: none;
 
-        @media screen and (min-width: 1100px) {
+        @media screen and (min-width: 500px) {
             display: block;
             margin: $spacer 0;
         }
@@ -360,6 +361,13 @@ p {
         @media screen and (min-width: 500px) {
             text-decoration: none;
             color: $c-primary;
+        }
+
+        @media screen and (min-width: 1100px) {
+            
+            &:hover {
+                color: $b-light;
+            }
         }
     }
 }
