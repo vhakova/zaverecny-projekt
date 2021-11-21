@@ -1,0 +1,120 @@
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+//font-family: 'Roboto', sans-serif;
+//font-family: 'Rosario', sans-serif;
+
+$f-text: 'Roboto', sans-serif;
+$f-title: 'Rosario', sans-serif;
+
+$c-primary: #FFFFFF;
+$c-secondary: #294461;
+
+$w-light: 300;
+$w-regular: 400;
+$w-bold: 700;
+
+$s-menu: 20px;
+$s-title: 30px;
+$s-text: 24px;
+$s-references: 20px;
+$s-footer: 25px;
+
+$b-base: #FFFFFF;
+$b-light: #657B9F;
+$b-darker: #657B9F;
+$b-dark: #2A4159;
+
+$spacer: 20px;
+$between-line: 15px;
+
+$shadow: #00000048;
+
+body {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+//Paticka
+.footer {
+    font-family: $f-text;
+    color: $c-primary;
+    font-weight: $w-regular;
+    font-size: $s-footer;
+    background-color: $b-dark;
+    margin-top: $between-line;
+    padding: $spacer*2 $spacer*2 0 $spacer*2;
+    text-align: center;
+
+    &__contacts {
+        line-height: 2em;
+        letter-spacing: 0.1em;
+        margin-bottom: $spacer*6;
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 25%;
+            bottom: -$spacer*3;
+            width: 50%;
+            height: 1px;
+            background-color: white;
+            opacity: 0.65;
+        }
+    }
+
+    &__logo {
+        display: none;
+        & img {
+            width: 150px;
+            border: 5px solid $b-darker;
+            border-radius: 200px;
+        }
+    }
+
+    &__lastLine {
+        font-size: $s-menu;
+        line-height: 1.5em;
+        margin-left: -$spacer*2;
+        margin-right: -$spacer*2;
+        padding: $spacer $spacer*2;
+        background-color: $b-darker;
+        opacity: 0.65;
+        
+    }
+
+}
+
+.menu {
+    margin-bottom: $spacer*3;
+
+    &__list {
+        list-style: none;
+        padding: 0;
+    }
+
+    &__item {
+        padding: $spacer*2;
+        border-bottom: 1px dotted $b-darker;
+
+        &--first {
+            padding: $spacer $spacer*2 $spacer*2 $spacer*2;
+            border-bottom: 1px dotted $b-darker;
+        }
+
+        &--last {
+            padding: $spacer*2;
+            border-bottom: 0;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $c-primary;
+    }
+}
+

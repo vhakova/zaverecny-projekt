@@ -1,0 +1,84 @@
+html {
+  box-sizing: border-box;
+}
+
+*, ::before, ::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.footer {
+  font-family: "Roboto", sans-serif;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 25px;
+  background-color: #2A4159;
+  margin-top: 15px;
+  padding: 40px 40px 0 40px;
+  text-align: center;
+}
+.footer__contacts {
+  line-height: 2em;
+  letter-spacing: 0.1em;
+  margin-bottom: 120px;
+  position: relative;
+}
+.footer__contacts::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 25%;
+  bottom: -60px;
+  width: 50%;
+  height: 1px;
+  background-color: white;
+  opacity: 0.65;
+}
+.footer__logo {
+  display: none;
+}
+.footer__logo img {
+  width: 150px;
+  border: 5px solid #657B9F;
+  border-radius: 200px;
+}
+.footer__lastLine {
+  font-size: 20px;
+  line-height: 1.5em;
+  margin-left: -40px;
+  margin-right: -40px;
+  padding: 20px 40px;
+  background-color: #657B9F;
+  opacity: 0.65;
+}
+
+.menu {
+  margin-bottom: 60px;
+}
+.menu__list {
+  list-style: none;
+  padding: 0;
+}
+.menu__item {
+  padding: 40px;
+  border-bottom: 1px dotted #657B9F;
+}
+.menu__item--first {
+  padding: 20px 40px 40px 40px;
+  border-bottom: 1px dotted #657B9F;
+}
+.menu__item--last {
+  padding: 40px;
+  border-bottom: 0;
+}
+.menu__link {
+  text-decoration: none;
+  color: #FFFFFF;
+}/*# sourceMappingURL=style.css.map */
