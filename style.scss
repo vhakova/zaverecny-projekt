@@ -18,7 +18,7 @@ $s-menu: 20px;
 $s-title: 24px;
 $s-text: 20px;
 $s-references: 20px;
-$s-footer: 22px;
+$s-footer: 20px;
 
 $b-base: #FFFFFF;
 $b-lighter: #b5bfcfea;
@@ -42,7 +42,19 @@ p {
 //Paticka
 .footer {
 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $b-dark;
+    color: $c-primary;
+    font-weight: $w-light;
+    font-size: $s-text/1.5;
+    border: 0 2px solid $c-primary;
+    box-shadow: 0 -3px 3px $shadow;
+
     @media screen and (min-width: 500px) {
+        position: static;
         font-family: $f-text;
         color: $c-primary;
         font-weight: $w-regular;
@@ -50,14 +62,15 @@ p {
         background-color: $b-dark;
         margin-top: $between-line;
         padding: $spacer*2 $spacer*2 0 $spacer*2;
-        text-align: center;    
+        text-align: center; 
+        box-shadow: none;   
     }
 
     @media screen and (min-width: 1100px) {
         display: grid;
         grid-template-columns: 50%;
         grid-template-rows: 70px 280px 50px;
-        gap: $spacer $spacer*2;
+        gap: $spacer;
         font-size: 1em;
         position: relative;
     }
@@ -99,6 +112,12 @@ p {
     }
 
     .adress {
+        display: none;
+
+        @media screen and (min-width: 500px) {
+            display: block;
+        }
+
         @media screen and (min-width: 1100px) {
             display: none;
         }
@@ -193,7 +212,10 @@ p {
 
     &__lastLine {
 
+        display: none;
+
         @media screen and (min-width: 500px) {
+            display: block;
             font-size: $s-menu;
             line-height: 1.5em;
             margin-left: -$spacer*2;
@@ -213,6 +235,7 @@ p {
     }
 
     &__break {
+
         @media screen and (min-width: 1100px) {
             display: none;
         }
@@ -252,22 +275,32 @@ p {
 
     &__list {
 
+        display: flex;
+        flex: 1 1 25%;
+        justify-content: space-between;
+        text-align: center;
+        list-style: none;
+        padding: 0 $spacer;
+
         @media screen and (min-width: 500px){
-            list-style: none;
+            display: block;
             padding: 0;
         }
 
         @media screen and (min-width: 1100px) {
             display: flex;
-            flex: 1 1 20%;
+            flex: 1 0 20%;
             align-self: center;
         }
     }
 
     &__item {
 
+        padding: $spacer $spacer/2;
+
         @media screen and (min-width: 500px) {
             padding: $spacer*2;
+            border-right: none;
             border-bottom: 1px dotted $b-darker;
         }
 
@@ -279,6 +312,8 @@ p {
         }
 
         &--first {
+
+            padding: $spacer 0;
 
             @media screen and (min-width: 500px) {
                 padding: $spacer $spacer*2 $spacer*2 $spacer*2;
@@ -295,6 +330,8 @@ p {
         }
 
         &--last {
+
+            padding: $spacer 0;
 
             @media screen and (min-width: 500px) {
                 padding: $spacer*2;
@@ -315,10 +352,24 @@ p {
 
     &__link {
 
+        color: $c-primary;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: $f-text;
+
         @media screen and (min-width: 500px) {
             text-decoration: none;
             color: $c-primary;
         }
     }
+}
+
+.hide {
+    display: none;
+
+    @media screen and (min-width: 500px) {
+        display: block;
+    }
+
 }
 
