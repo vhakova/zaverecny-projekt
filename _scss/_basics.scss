@@ -1,0 +1,48 @@
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+
+//font-family: 'Roboto', sans-serif;
+//font-family: 'Rosario', sans-serif;
+
+$f-text: 'Roboto', sans-serif;
+$f-title: 'Rosario', sans-serif;
+
+$c-primary: #FFFFFF;
+$c-secondary: #294461;
+
+$w-light: 300;
+$w-regular: 400;
+$w-bold: 700;
+
+$s-menu: 20px;
+$s-title: 24px;
+$s-text: 20px;
+$s-references: 20px;
+$s-footer: 20px;
+
+$b-base: #FFFFFF;
+$b-lighter: #b5bfcfea;
+$b-light: #8097bd;
+$b-darker: #657B9F;
+$b-dark: #2A4159;
+
+$spacer: 20px;
+$between-line: 15px;
+
+$shadow: #00000048;
+
+.reservationButton--big {
+    font-family: $f-text;
+    font-weight: $w-regular;
+    font-size: $s-title;
+    text-transform: uppercase;
+    text-align: center;
+    color: $c-primary;
+    text-decoration: none;
+    padding: $spacer $spacer*2;
+    background-color: #465166;
+    opacity: 0.65;
+    border-radius: 2px;
+    text-shadow: 1px 1px 2px basics.$shadow;
+}

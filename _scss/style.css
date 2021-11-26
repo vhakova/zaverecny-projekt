@@ -6,6 +6,20 @@ html {
   box-sizing: inherit;
 }
 
+.reservationButton--big {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 20px 40px;
+  background-color: #465166;
+  opacity: 0.65;
+  border-radius: 2px;
+}
+
 body {
   margin: 0;
 }
@@ -323,7 +337,7 @@ p {
 }
 @media screen and (min-width: 1100px) {
   .menu__link:hover {
-    color: #657B9F;
+    color: #8097bd;
   }
 }
 
@@ -334,4 +348,88 @@ p {
   .hide {
     display: block;
   }
+}
+
+.label {
+  height: 700px;
+  background-image: url("/images/mainPhoto.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #657B9F;
+  position: relative;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px #00000048;
+}
+.label::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 140px;
+  width: 100%;
+  background-color: #465166;
+  opacity: 0.45;
+  box-shadow: 4px 4px 8px #00000048;
+}
+
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.header-button {
+  position: absolute;
+  bottom: -470px;
+  left: 40%;
+}
+.headerMenu__logo {
+  width: 120px;
+  border: 5px solid #657B9F;
+  border-radius: 200px;
+}
+.header__top {
+  display: flex;
+  justify-content: space-between;
+}
+.header__contact {
+  flex: 0 1 auto;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  color: #FFFFFF;
+  padding: 38px 100px;
+  letter-spacing: 4px;
+  text-shadow: 1px 1px 2px #00000048;
+}
+.headerMenu {
+  list-style: none;
+  padding: 0;
+  height: 60px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0;
+  background-color: #657B9F;
+  text-align: center;
+  margin: 0 120px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 8px #00000048;
+}
+.headerMenu__item {
+  padding: 20px;
+}
+.headerMenu__link {
+  text-decoration: none;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  padding: 20px;
+}
+.headerMenu__link:hover {
+  background-color: #2A4159;
 }/*# sourceMappingURL=style.css.map */
