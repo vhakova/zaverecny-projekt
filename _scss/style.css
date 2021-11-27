@@ -407,6 +407,44 @@ p {
     height: 140px;
   }
 }
+@media screen and (min-width: 500px) {
+  .label--pages {
+    background-image: url("/images/mainPhoto.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px #00000048;
+    height: 350px;
+    background-position: right bottom;
+    background-color: #657B9F;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .label--pages {
+    background-position: center top;
+    height: 180px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .label--pages::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2A4159;
+    box-shadow: 4px 4px 8px #00000048;
+    height: 35px;
+    opacity: 0.55;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .label--pages::after {
+    height: 180px;
+  }
+}
 
 .header {
   width: 100%;
@@ -424,6 +462,9 @@ p {
     bottom: -470px;
     left: 37%;
   }
+}
+.header-button--pages {
+  display: none;
 }
 .header__top {
   display: flex;
@@ -467,6 +508,29 @@ p {
     padding: 38px 100px;
   }
 }
+.header__contact--pages {
+  display: none;
+}
+@media screen and (min-width: 500px) {
+  .header__contact--pages {
+    display: block;
+    flex: 0 1 auto;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 10px 40px;
+    letter-spacing: 4px;
+    text-shadow: 1px 1px 2px #00000048;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .header__contact--pages {
+    font-size: 20px;
+    padding: 38px 100px;
+  }
+}
 .headerMenu {
   display: none;
 }
@@ -496,7 +560,7 @@ p {
 }
 @media screen and (min-width: 500px) and (max-width: 1100px) {
   .headerMenu__item {
-    padding: 11.7647058824px 40px;
+    padding: 11.7647058824px 0;
     margin: 10px 0;
     width: 170px;
     background-color: #2A4159;
@@ -516,8 +580,8 @@ p {
 }
 @media screen and (min-width: 500px) {
   .headerMenu__link {
+    padding: 11.7647058824px 60px 11.7647058824px 40px;
     font-size: 16px;
-    padding: 0;
   }
 }
 @media screen and (min-width: 1100px) {
@@ -525,9 +589,10 @@ p {
     font-size: 18px;
     padding: 20px;
   }
-}
-.headerMenu__link:hover {
-  background-color: #2A4159;
+  .headerMenu__link:hover, .headerMenu__link:active {
+    background-color: #2A4159;
+    opacity: 1;
+  }
 }
 
 @media screen and (min-width: 500px) and (max-width: 1100px) {

@@ -38,6 +38,47 @@
         }
     }
 
+    &--pages {
+
+        @media screen and (min-width: 500px) {
+            background-image: url("/images/mainPhoto.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative; 
+            margin-bottom: basics.$spacer;
+            box-shadow: 0 2px 10px basics.$shadow;
+            height: 350px;
+            background-position: right bottom;
+            background-color: basics.$b-darker;
+        }
+    
+        @media screen and (min-width: 1100px) {
+            background-position: center top;
+            height: 180px;
+        }
+    
+        &::after {
+            
+            @media screen and (min-width: 500px) {        
+                content: " ";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color: basics.$b-dark;
+                box-shadow: 4px 4px 8px basics.$shadow;
+                height: 35px;
+                opacity: 0.55;
+            }
+    
+            @media screen and (min-width: 1100px) {        
+                height: 180px;
+            }
+        }
+
+    }
+
 }
 
 .header {
@@ -54,6 +95,10 @@
             position: absolute;
             bottom: -470px;
             left: 37%;
+        }
+
+        &--pages {
+            display: none;
         }
     }   
 
@@ -98,6 +143,28 @@
             padding: 38px basics.$spacer*5;   
         }
 
+        &--pages {
+            display: none;
+
+            @media screen and (min-width: 500px) {
+                display: block;
+                flex: 0 1 auto;
+                font-size: 14px;
+                font-weight: basics.$w-regular;
+                font-family: basics.$f-text;
+                text-decoration: none;
+                color: basics.$c-primary;
+                padding: 10px basics.$spacer*2;
+                letter-spacing: 4px;
+                text-shadow: 1px 1px 2px basics.$shadow;    
+            }
+    
+            @media screen and (min-width: 1100px) {
+                font-size: 20px;
+                padding: 38px basics.$spacer*5;   
+            }
+        }
+
     }
 
     &Menu {
@@ -128,7 +195,7 @@
             padding: basics.$spacer;
 
             @media screen and (min-width: 500px) and (max-width: 1100px) {
-                padding: basics.$spacer/1.7 basics.$spacer*2;
+                padding: basics.$spacer/1.7 0;
                 margin: basics.$spacer/2 0;
                 width: 170px;
                 background-color: basics.$b-dark;
@@ -151,18 +218,21 @@
             padding: basics.$spacer;
 
             @media screen and (min-width: 500px) {
+                padding: basics.$spacer/1.7 basics.$spacer*3 basics.$spacer/1.7 basics.$spacer*2;
                 font-size: 16px;
-                padding: 0;
             }
 
             @media screen and (min-width: 1100px) {
                 font-size: 18px;
                 padding: basics.$spacer;
+
+                &:hover,
+                &:active {
+                    background-color: basics.$b-dark;
+                    opacity: 1;
+                }
             }
 
-            &:hover {
-                background-color: basics.$b-dark;
-            }
         }
     }
 }
