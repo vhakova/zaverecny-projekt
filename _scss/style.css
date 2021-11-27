@@ -245,6 +245,7 @@ p {
     justify-self: right;
     align-self: flex-end;
     position: relative;
+    width: 105%;
   }
 }
 @media screen and (min-width: 1100px) {
@@ -567,6 +568,12 @@ p {
     opacity: 0.7;
     border-radius: 0 5px 5px 0;
     box-shadow: 0 4px 6px #00000048;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .headerMenu__item {
+    padding: 0;
+    margin: 18px 0;
   }
 }
 .headerMenu__link {
