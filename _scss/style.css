@@ -32,6 +32,21 @@ html {
   }
 }
 
+.reservationButton--small {
+  background-color: #657B9F;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 6.6666666667px;
+  opacity: 0.65;
+  border-radius: 2px;
+  text-shadow: 1px 1px 2px #00000048;
+}
+
 body {
   margin: 0;
 }
@@ -362,11 +377,11 @@ p {
   }
 }
 
-.hide {
+.hide-phone {
   display: none;
 }
 @media screen and (min-width: 500px) {
-  .hide {
+  .hide-phone {
     display: block;
   }
 }
@@ -569,6 +584,10 @@ p {
     border-radius: 0 5px 5px 0;
     box-shadow: 0 4px 6px #00000048;
   }
+  .headerMenu__item:active {
+    background-color: #2A4159;
+    opacity: 1;
+  }
 }
 @media screen and (min-width: 1100px) {
   .headerMenu__item {
@@ -605,5 +624,290 @@ p {
 @media screen and (min-width: 500px) and (max-width: 1100px) {
   .hide-top {
     display: none;
+  }
+}
+
+.rooms {
+  display: block;
+  margin: 100px 0 15px 0;
+  background-color: #b5bfcfea;
+  box-shadow: 0 2px 10px #00000048;
+}
+@media screen and (min-width: 500px) {
+  .rooms {
+    margin: 0 0 15px 0;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .rooms {
+    display: flex;
+    padding: 0 20px;
+  }
+}
+.rooms__card {
+  padding: 20px;
+  border-bottom: 2px solid #FFFFFF;
+}
+@media screen and (min-width: 500px) {
+  .rooms__card {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: auto auto;
+    border-bottom: none;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .rooms__card {
+    display: block;
+    flex: 0 0 calc(50% - basics.$spacer);
+  }
+}
+.rooms__card--reversed {
+  padding: 20px;
+}
+@media screen and (min-width: 500px) {
+  .rooms__card--reversed {
+    padding: 20px 0 20px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: auto auto;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .rooms__card--reversed {
+    display: block;
+    flex: 0 0 calc(50% - basics.$spacer);
+  }
+}
+
+.card--hidden {
+  display: none;
+}
+.card-button {
+  text-decoration: none;
+  display: block;
+  width: 80%;
+  margin: 20px auto;
+  letter-spacing: 2px;
+}
+@media screen and (min-width: 500px) {
+  .card-button {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin-top: 0;
+    width: 80%;
+  }
+}
+.card-button--reversed {
+  text-decoration: none;
+  display: block;
+  width: 80%;
+  margin: 20px auto;
+  letter-spacing: 2px;
+}
+@media screen and (min-width: 500px) {
+  .card-button--reversed {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin-top: 0;
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .card__text {
+    padding: 20px 20px 20px 40px;
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .card__text--reversed {
+    padding: 20px 40px 20px 20px;
+    font-size: 20px;
+  }
+}
+.card__title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: #294461;
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+  position: relative;
+}
+.card__title::before {
+  content: " ";
+  position: absolute;
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #2A4159;
+  top: -80px;
+  z-index: -2;
+}
+@media screen and (min-width: 500px) {
+  .card__title::before {
+    top: 260px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .card__title::before {
+    display: none;
+  }
+}
+@media screen and (min-width: 500px) {
+  .card__title {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .card__title {
+    text-align: center;
+    font-size: 24px;
+    padding-left: 20px;
+  }
+  .card__title::before {
+    content: " ";
+    position: absolute;
+    display: block;
+    height: 3px;
+    width: 150px;
+    background-color: #2A4159;
+    top: 50%;
+    left: 40px;
+  }
+  .card__title::after {
+    content: " ";
+    position: absolute;
+    display: block;
+    height: 3px;
+    width: 150px;
+    background-color: #2A4159;
+    top: 50%;
+    right: 20px;
+    z-index: -2;
+  }
+}
+.card__title--reversed {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: #294461;
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+  position: relative;
+}
+.card__title--reversed::before {
+  content: " ";
+  position: absolute;
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #2A4159;
+  top: -80px;
+  z-index: -2;
+}
+@media screen and (min-width: 500px) {
+  .card__title--reversed::before {
+    top: 260px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .card__title--reversed::before {
+    display: none;
+  }
+}
+@media screen and (min-width: 500px) {
+  .card__title--reversed {
+    margin-bottom: 20px;
+    text-align: right;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .card__title--reversed {
+    text-align: center;
+    font-size: 24px;
+    padding-right: 20px;
+  }
+  .card__title--reversed::before {
+    content: " ";
+    position: absolute;
+    display: block;
+    height: 3px;
+    width: 150px;
+    background-color: #2A4159;
+    top: 50%;
+    left: 20px;
+  }
+  .card__title--reversed::after {
+    content: " ";
+    position: absolute;
+    display: block;
+    height: 3px;
+    width: 150px;
+    background-color: #2A4159;
+    top: 50%;
+    right: 40px;
+    z-index: -2;
+  }
+}
+.card__image {
+  max-width: 100%;
+  border: 10px solid #FFFFFF;
+}
+@media screen and (min-width: 500px) {
+  .card__image {
+    max-height: 400px;
+    justify-self: center;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .card__image {
+    max-height: 100%;
+    width: 70%;
+    margin-left: 15%;
+    transform: rotate(3deg);
+    box-shadow: 2px 5px 10px #00000048;
+    margin-top: 30px;
+  }
+}
+.card__image--reversed {
+  max-width: 100%;
+  border: 10px solid #FFFFFF;
+}
+@media screen and (min-width: 1100px) {
+  .card__image--reversed {
+    width: 70%;
+    margin-left: 15%;
+    transform: rotate(-5deg);
+    box-shadow: 2px 5px 10px #00000048;
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .card__content {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    padding: 30px 20px 10px 0;
+    line-height: 2em;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .card__content {
+    text-align: justify;
+  }
+}
+@media screen and (min-width: 500px) {
+  .card__content--reversed {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    padding: 30px 0 10px 20px;
+    text-align: right;
+    line-height: 2em;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .card__content--reversed {
+    text-align: justify;
   }
 }/*# sourceMappingURL=style.css.map */
