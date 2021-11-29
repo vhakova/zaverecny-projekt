@@ -200,8 +200,15 @@ p {
             grid-column: 1 / 3;
             grid-row: 3 / 4;
             margin-bottom: basics.$spacer;
-            font-size: basics.$s-footer*0.6;
+            font-size: basics.$s-footer*0.8;
             align-self: center;
+        }
+
+        & a {
+            text-decoration: none;
+            color: basics.$c-primary;
+            font-weight: basics.$w-bold;
+            font-size: 15px;
         }
     }
 

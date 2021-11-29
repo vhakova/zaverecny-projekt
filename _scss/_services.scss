@@ -1,0 +1,50 @@
+@use 'basics';
+
+.services {
+    background-color: basics.$b-base;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin: 0 0 basics.$between-line 0;
+
+    @media screen and (min-width: 500px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (min-width: 1100px) {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    &__item {
+        background-color: basics.$b-dark;
+        box-shadow: 0 2px 10px basics.$shadow;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        line-height: 1.5em;
+        letter-spacing: 2px;
+
+        @media screen and (min-width: 1100px) {
+            &:hover {
+                background-color: basics.$b-darker;
+            }
+        }
+    }
+
+    &__title {
+        text-align: center;
+        font-family: basics.$f-text;
+        color: basics.$c-primary;
+        padding: 0 20px 20px 20px;
+    }
+
+    &__picture {
+        @media screen and (min-width:500px) {
+            align-self: center;
+        }
+    }
+
+    &__image {
+        max-width: 70px;
+    }
+}
