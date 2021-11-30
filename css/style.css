@@ -7,6 +7,13 @@ html {
 }
 
 @media screen and (min-width: 1100px) {
+  .wrapper {
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1100px) {
   .reservationButton--big {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
@@ -62,6 +69,7 @@ p {
     position: static;
     font-family: "Roboto", sans-serif;
     color: #FFFFFF;
+    border-top: 0;
     font-weight: 400;
     font-size: 20px;
     background-color: #2A4159;
@@ -459,6 +467,13 @@ p {
   }
 }
 
+@media screen and (min-width: 1100px) {
+  .button {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .header {
   width: 100%;
   position: absolute;
@@ -470,10 +485,12 @@ p {
 }
 @media screen and (min-width: 1100px) {
   .header-button {
-    display: block;
+    display: inline;
     position: absolute;
     bottom: -470px;
-    left: 37%;
+  }
+  .header-button:hover {
+    background-color: #2A4159;
   }
 }
 .header-button--pages {
@@ -482,6 +499,13 @@ p {
 .header__top {
   display: flex;
   justify-content: space-between;
+}
+@media screen and (min-width: 1800px) {
+  .header__top {
+    width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .header__top img {
   height: 50px;
@@ -566,6 +590,13 @@ p {
     margin: 0 120px;
     border-radius: 5px;
     box-shadow: 4px 4px 8px #00000048;
+  }
+}
+@media screen and (min-width: 1800px) {
+  .headerMenu {
+    width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .headerMenu__item {
