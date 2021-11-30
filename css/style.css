@@ -1098,20 +1098,4 @@ p {
 }
 .services__image {
   max-width: 70px;
-}
-
-.customer-review__title {
-  display: flex;
-  align-items: baseline;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 17px;
-  color: #FFFFFF;
-  text-align: center;
-  margin: 0 20px;
-  letter-spacing: 3px;
-}
-.customer-review__title img {
-  width: 30px;
-  height: 30px;
 }/*# sourceMappingURL=style.css.map */
