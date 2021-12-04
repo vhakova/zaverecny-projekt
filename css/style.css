@@ -1047,11 +1047,25 @@ p {
     gap: 60px;
     margin: 0 0 15px 0;
     border-top: none;
+    position: relative;
+  }
+  .light-content::after {
+    content: " ";
+    position: absolute;
+    top: 1px;
+    right: 0;
+    height: 98%;
+    width: 50%;
+    background: url(/images/about-us.jpg);
+    box-shadow: -5px 0 6px #00000048;
+    opacity: 1;
+    z-index: -1;
   }
 }
 @media screen and (min-width: 500px) {
   .light-content__content {
     align-self: center;
+    padding-right: 20px;
   }
 }
 .light-content__img {
@@ -1200,7 +1214,12 @@ p {
 @media screen and (min-width: 500px) {
   .photos {
     padding-top: 36px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .photos {
     display: grid;
+    gap: 10px;
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -1217,6 +1236,7 @@ p {
   transition: transform 0.35s ease;
   cursor: zoom-in;
   border: 10px solid #FFFFFF;
+  box-shadow: 5px 3px 10px #00000048;
 }
 .gallery input[type=checkbox]:checked ~ img {
   transform: scale(2.5);
@@ -1227,7 +1247,7 @@ p {
   z-index: 3;
   border: 10px solid #FFFFFF;
 }
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1000px) {
   .gallery input[type=checkbox]:checked ~ img {
     transform: scale(3.3);
     left: -300px;
@@ -1251,10 +1271,10 @@ p {
     background-color: #2A4159;
     top: 50%;
     right: 10%;
-    z-index: -2;
+    z-index: 1;
   }
 }
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1000px) {
   .line {
     line-height: 1.5em;
   }
