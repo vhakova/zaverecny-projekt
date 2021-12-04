@@ -413,7 +413,7 @@ p {
 
 @media screen and (min-width: 500px) {
   .label {
-    background-image: url("/images/mainphoto.jpg");
+    background-image: url("images/mainphoto.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
