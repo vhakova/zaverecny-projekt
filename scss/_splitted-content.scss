@@ -1,0 +1,183 @@
+@use 'basics';
+
+.main-box__text {
+
+    @media screen and (min-width: 1000px) {
+        position: relative;
+        padding-top: 70px;
+
+        &::before {
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 50px;
+            width: 2px;
+            background-color: basics.$b-dark;
+            opacity: 1;
+            z-index: 1;
+        }
+    
+        &::after {
+            content: " ";
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            height: 1300px;
+            width: 2px;
+            background-color: basics.$b-dark;
+            opacity: 1;
+            z-index: 1;
+        }
+        
+    }
+}
+
+.main__box {
+    @media screen and (min-width: 1000px) {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        margin-top: 40px;
+    }
+
+    & h1 {
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+}
+
+.no-space {
+    margin: 15px 0;
+}
+
+.bottom-space--smaller {
+    padding-bottom: 80px;
+
+    @media screen and (min-width: 500px) {
+        padding-bottom: 0;
+    }
+}
+
+.light-content--no-grid {
+    background-color: basics.$b-lighter;
+    padding: basics.$spacer basics.$spacer*2;
+    margin: 0 0 basics.$between-line 0;
+    box-shadow: 0 2px 10px basics.$shadow
+}
+
+.light-content--grid {
+    background-color: basics.$b-lighter;
+    padding: basics.$spacer basics.$spacer*2;
+    margin: 0 0 basics.$between-line 0;
+    box-shadow: 0 2px 10px basics.$shadow;
+
+    @media screen and (min-width: 500px) {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        padding: basics.$spacer*2 0 basics.$spacer*2 basics.$spacer*2;
+    }
+
+    @media screen and (min-width: 1000px) {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        padding: basics.$spacer*2;
+        margin-right: 80px;
+    }
+
+    & article {
+        @media screen and (min-width: 500px) {
+           align-self: center; 
+        }  
+    }
+
+    & h1 {
+        @media screen and (min-width: 500px) {
+            margin: 0;  
+        }    
+    }
+
+    & img {
+        max-width: 100%;
+        align-self: center;
+        border: 10px solid basics.$b-base;
+    }
+}
+
+.dark-content--no-grid {
+
+    background-color: basics.$b-dark;
+    padding: basics.$spacer basics.$spacer*2;
+    margin: 0 0 basics.$between-line 0;
+    box-shadow: 0 2px 10px basics.$shadow;
+
+    @media screen and (min-width: 500px) {
+        margin: 0 0 basics.$between-line 0;
+    }
+
+    @media screen and (min-width: 1000px) {
+        background-color: basics.$b-base;
+        color: basics.$c-secondary;
+        box-shadow: none;
+    }
+}
+
+.dark-content--grid {
+
+    background-color: basics.$b-dark;
+    padding: basics.$spacer basics.$spacer*2;
+    margin: 0 0 basics.$between-line 0;
+    box-shadow: 0 2px 10px basics.$shadow;
+
+    @media screen and (min-width: 500px) {
+        margin: 0 0 basics.$between-line 0;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        padding: basics.$spacer*2 basics.$spacer*2 basics.$spacer*2 0;
+    }
+
+    @media screen and (min-width: 1000px) {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        padding: basics.$spacer*2;
+        margin-right: 80px;
+    }
+
+    & h1 {
+        @media screen and (min-width: 500px) {
+            margin: 0;  
+        }    
+    }
+
+    & article {
+        @media screen and (min-width: 500px) {
+            grid-row: 1 / 2;
+            grid-column: 1 / 2;
+            align-self: center;      
+        }     
+    }
+
+    & img {        
+        
+        max-width: 100%;
+        border: 10px solid basics.$b-base;
+
+        @media screen and (min-width: 500px) {
+          align-self: center; 
+          grid-column: 2 / 3;   
+        }   
+    }
+}
+
+.padding--bigger {
+    @media screen and (min-width: 500px) {
+        padding: 40px 80px;
+    }
+}
+
+.hide-me {
+    @media screen and (max-width: 1000px) {
+        display: none;
+    }
+}
+
+
