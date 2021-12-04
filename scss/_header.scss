@@ -41,7 +41,7 @@
     &--pages {
 
         @media screen and (min-width: 500px) {
-            background-image: url("images/main-photo.jpg");
+            background-image: url("/images/main-photo.jpg");
             background-repeat: no-repeat;
             background-size: cover;
             position: relative; 
@@ -123,7 +123,13 @@
             margin-right: auto;;
         }
 
+        & a {
+            margin: -4px auto;
+        }
+
+
         & img {
+            display: inline;
             height: 50px;
             border-radius: 0 0 40% 40%;
             margin-left: auto;
@@ -225,16 +231,12 @@
                 opacity: 0.7;
                 border-radius: 0 5px 5px 0;
                 box-shadow: 0 4px 6px basics.$shadow;
-
-                &:active {
-                    background-color: basics.$b-dark;
-                    opacity: 1;
-                }
             }
 
             @media screen and (min-width: 1100px) {
                 padding: 0;  
-                margin: 18px 0;
+                margin: 0;
+                align-self: center;
             }
 
 
@@ -259,10 +261,11 @@
                 font-size: 18px;
                 padding: basics.$spacer;
 
-                &:hover,
-                &:active {
+                &:hover {
                     background-color: basics.$b-dark;
-                    opacity: 1;
+                    opacity: 0.75;
+                    border-radius: 1px;
+                    position: relative;
                 }
             }
 
@@ -275,4 +278,7 @@
         display: none;
     } 
 }
+
+
+
 

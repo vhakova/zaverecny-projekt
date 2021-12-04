@@ -39,9 +39,7 @@
     }
 
     &__picture {
-        @media screen and (min-width:500px) {
-            align-self: center;
-        }
+        align-self: center;
     }
 
     &__image {

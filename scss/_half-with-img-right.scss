@@ -1,12 +1,11 @@
 @use 'basics';
 
-.about-us {
+.dark-content {
 
     background-color: basics.$b-dark;
     padding: basics.$spacer basics.$spacer*2;
     margin: 70px 0 basics.$between-line 0;
     box-shadow: 0 2px 10px basics.$shadow;
-    border-top: 3px dashed basics.$b-base;
 
     @media screen and (min-width: 500px) {
         display: grid;
