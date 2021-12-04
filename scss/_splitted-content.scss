@@ -1,7 +1,6 @@
 @use 'basics';
 
-.main-box__text {
-
+.main-box__top {
     @media screen and (min-width: 1000px) {
         position: relative;
         padding-top: 70px;
@@ -23,7 +22,67 @@
             position: absolute;
             bottom: 50px;
             left: 50%;
-            height: 1300px;
+            height: 2600px;
+            width: 2px;
+            background-color: basics.$b-dark;
+            opacity: 1;
+            z-index: 1;
+        }
+        
+    }
+
+    @media screen and (min-width: 1100px) {
+        position: relative;
+        padding-top: 70px;
+
+        &::before {
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 50px;
+            width: 2px;
+            background-color: basics.$b-dark;
+            opacity: 1;
+            z-index: 1;
+        }
+    
+        &::after {
+            content: " ";
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            height: 2350px;
+            width: 2px;
+            background-color: basics.$b-dark;
+            opacity: 1;
+            z-index: 1;
+        }
+        
+    }
+
+    @media screen and (min-width: 1800px) {
+        position: relative;
+        padding-top: 70px;
+
+        &::before {
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 50px;
+            width: 2px;
+            background-color: basics.$b-dark;
+            opacity: 1;
+            z-index: 1;
+        }
+    
+        &::after {
+            content: " ";
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            height: 1500px;
             width: 2px;
             background-color: basics.$b-dark;
             opacity: 1;
@@ -178,6 +237,101 @@
     @media screen and (max-width: 1000px) {
         display: none;
     }
+}
+
+.room-photos {
+    @media screen and (max-width: 500px) {
+        display: none;
+    }
+
+    @media screen and (min-width: 500px) {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: right;
+        padding-right: 40px;
+        padding-top: 20px;
+    }
+
+    @media screen and (min-width: 1000px) {
+        position: relative;
+        padding-right: 50px;
+    }
+
+    @media screen and (min-width: 1100px) {
+
+        &::after {
+            height: 100%;
+        }
+    }
+
+    @media screen and (min-width: 1800px) {
+        grid-template-columns: repeat(6, 1fr);
+        padding-right: 40px;
+    }
+}
+.room-gallery {
+
+    position: relative;  
+
+    & input[type=checkbox] {
+        display: none;
+    }
+
+    & img {
+        max-width: 100px;
+        margin: 3px;
+        transition: transform 0.35s ease;
+        cursor: zoom-in;
+        border: 2px solid basics.$b-base;
+
+        @media screen and (min-width: 1000px) {
+           box-shadow: 5px 3px 10px basics.$shadow;  
+        }
+    }
+
+    & input[type=checkbox]:checked~img {
+        transform: scale(2.5);
+        cursor: zoom-out;
+        position: absolute;
+        left: -180px;
+        top: -20px;
+        z-index: 3;
+        border: 10px solid basics.$b-base; 
+
+        @media screen and (min-width: 500px) {
+            transform: scale(5);
+            left: -250px;
+            top: -20px;
+        }
+
+        @media screen and (min-width: 1000px) {
+            transform: scale(7);
+            left: -300px;
+            top: -20px;
+        }
+    }
+
+}
+
+.rooms__img-line {
+
+    @media screen and (min-width: 500px) {
+        position: relative;
+
+        &::before {
+            content: " ";
+            position: absolute;
+            top: 90px;
+            left: 175px;
+            height: 80%;
+            width: 2px;
+            background-color: basics.$b-dark;
+            opacity: 1;
+            z-index: -1;
+        }    
+    }
+
 }
 
 
