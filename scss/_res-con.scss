@@ -13,7 +13,7 @@
 
     @media screen and (min-width: 500px) {
         padding-top: 0;
-        margin: -40px 0;
+        margin: 0;
         border-radius: 0;
         background-image: url(/images/mainphoto.jpg);
         background-size: cover;
@@ -34,10 +34,125 @@
 
     @media screen and (min-width: 1100px) {
         font-size: 40px;
+        margin: -40px 0;
     }
 }
 
-.reservation {
-    padding: 40px;
+.reservation,
+.contact {
+    padding: 40px 40px 120px 40px;
+
+    @media screen and (min-width: 500px) {
+        padding: 40px;
+    }
 }
 
+.map {
+    justify-self: center;
+    align-self: center;
+
+    @media screen and (min-width: 500px) {
+        padding-right: 40px;
+    }
+    
+}
+
+.contact__text {
+    display: block;
+    font-family: basics.$f-text;
+    font-weight: basics.$w-light;
+    font-size: 20px;
+    line-height: 2em;
+    color: basics.$c-secondary;
+    margin-bottom: 40px;
+    position: relative;
+
+    &::after {
+        content: " ";
+        position: absolute;
+        bottom: -80px;
+        left: 50%;
+        height: 70px;
+        width: 2px;
+        background-color: basics.$b-dark;
+        opacity: 1;
+        z-index: 1;
+    }
+
+    @media screen and (min-width: 1000px) {
+        font-size: 25px;
+    }
+}
+
+.contact__text--no-line {
+    display: block;
+    font-family: basics.$f-text;
+    font-weight: basics.$w-light;
+    font-size: 20px;
+    line-height: 2em;
+    color: basics.$c-secondary;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: 500px) {
+        font-size: 25px;
+    }
+}
+
+.contact__title {
+    display: block;
+    font-family: basics.$f-text;
+    font-weight: basics.$w-bold;
+    font-size: 20px;
+    line-height: 2em;
+    color: basics.$c-secondary;
+    margin: 80px 20px 0 20px;
+
+    @media screen and (min-width: 500px) {
+        font-size: 25px;
+    }
+}
+
+.reservation__text {
+
+    @media screen and (min-width: 500px) {
+        position: relative;
+        padding: 40px 20px;
+
+        &::before {
+            content: " ";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            height: 50px;
+            width: 2px;
+            background-color: basics.$b-dark;
+            opacity: 1;
+            z-index: -1;
+        }
+
+        &::after {
+            content: " ";
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            height: 50px;
+            width: 2px;
+            background-color: basics.$b-dark;
+            opacity: 1;
+            z-index: -1;
+        }
+    }
+
+    @media screen and (min-width: 1000px) {
+        &::before {
+            top: -20px;
+            height: 60px;
+            z-index: 1;
+        }
+
+        &::after {
+            height: 60px;
+            z-index: 1;
+        }
+    }
+}

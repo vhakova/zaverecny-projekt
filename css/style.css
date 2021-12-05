@@ -61,7 +61,7 @@ html {
   margin: 50px 0;
   text-decoration: none;
 }
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1000px) {
   .back-button {
     display: none;
   }
@@ -1881,7 +1881,7 @@ p {
 @media screen and (min-width: 500px) {
   .booking__button {
     padding-top: 0;
-    margin: -40px 0;
+    margin: 0;
     border-radius: 0;
     background-image: url(/images/mainphoto.jpg);
     background-size: cover;
@@ -1902,9 +1902,124 @@ p {
 @media screen and (min-width: 1100px) {
   .booking__button {
     font-size: 40px;
+    margin: -40px 0;
   }
 }
 
-.reservation {
-  padding: 40px;
+.reservation,
+.contact {
+  padding: 40px 40px 120px 40px;
+}
+@media screen and (min-width: 500px) {
+  .reservation,
+.contact {
+    padding: 40px;
+  }
+}
+
+.map {
+  justify-self: center;
+  align-self: center;
+}
+@media screen and (min-width: 500px) {
+  .map {
+    padding-right: 40px;
+  }
+}
+
+.contact__text {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 2em;
+  color: #294461;
+  margin-bottom: 40px;
+  position: relative;
+}
+.contact__text::after {
+  content: " ";
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  height: 70px;
+  width: 2px;
+  background-color: #2A4159;
+  opacity: 1;
+  z-index: 1;
+}
+@media screen and (min-width: 1000px) {
+  .contact__text {
+    font-size: 25px;
+  }
+}
+
+.contact__text--no-line {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 2em;
+  color: #294461;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 500px) {
+  .contact__text--no-line {
+    font-size: 25px;
+  }
+}
+
+.contact__title {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 2em;
+  color: #294461;
+  margin: 80px 20px 0 20px;
+}
+@media screen and (min-width: 500px) {
+  .contact__title {
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .reservation__text {
+    position: relative;
+    padding: 40px 20px;
+  }
+  .reservation__text::before {
+    content: " ";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    height: 50px;
+    width: 2px;
+    background-color: #2A4159;
+    opacity: 1;
+    z-index: -1;
+  }
+  .reservation__text::after {
+    content: " ";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    height: 50px;
+    width: 2px;
+    background-color: #2A4159;
+    opacity: 1;
+    z-index: -1;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .reservation__text::before {
+    top: -20px;
+    height: 60px;
+    z-index: 1;
+  }
+  .reservation__text::after {
+    height: 60px;
+    z-index: 1;
+  }
 }/*# sourceMappingURL=style.css.map */
